@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Navbar appName ="Shirorimark" userName ="Albert Pinto" status={this.state.status} />       
+      <Navbar appName ="Shiorimark" userName ="Albert Pinto" status={this.state.status} />       
       <button onClick={this.switchNameHandler}>SwitchName</button>
     </div>
     );
