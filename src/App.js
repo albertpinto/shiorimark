@@ -4,28 +4,18 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Header from "./components/Header";
-import Actions from "./components/Actions"
-import Bookmarks from "./components/Bookmarks"
+import Actions from "./components/Actions";
+import Bookmarks from "./components/Bookmarks";
+import Footer from "./components/Footer";
+
+const url ="http://localhost:4000/"
 
 class App extends Component {
   state = {
     status: "Login"
   };
 
-  switchNameHandler = () => {
-    console.log(this.state.status);
-    if (this.state.status === "Logout") {
-      console.log("Was clicked Logout..");
-      this.setState({
-        status: "Login"
-      });
-    } else {
-      console.log("Was clicked login..");
-      this.setState({
-        status: "Logout"
-      });
-    }
-  };
+ 
   render() {
     return (
       <div>
@@ -33,35 +23,36 @@ class App extends Component {
           appName="Shiorimark"
           userName="Albert Pinto"
           status={this.state.status}
+          url={url}
         />
         <Header type="Home" colorName="py-2 bg-primary text-white"/>
         <Actions />
-
-
         <BrowserRouter>
           <switch>
             <Route path="/" component={Bookmarks} exact={true} />
           </switch>
         </BrowserRouter>
+        <Footer appName="Shiorimark"/>
       </div>
+      
     );
   }
 }
-// <button onClick={this.switchNameHandler}>SwitchName</button>
-// <div>
-// <BrowserRouter>
-//   <Navbar
-//   appName="Shirorimark"
-//   userName="Albert Pinto"
-//   status={this.state.status}
-// />
-//   <switch>
-//     <Route path="/" component={App} exact={true} />
-//   </switch>
-// </BrowserRouter>
-// <button onClick={this.switchNameHandler}>SwitchName</button>
-// </div>
+
 export default App;
-// <Route path="/bookmarks" component={Bookmarks} />
-// <Route path="/categories" component={Categories} />
-// <Route path="/users" component={Users} />
+
+// switchNameHandler = () => {
+//   console.log(this.state.status);
+//   if (this.state.status === "Logout") {
+//     console.log("Was clicked Logout..");
+//     this.setState({
+//       status: "Login"
+//     });
+//   } else {
+//     console.log("Was clicked login..");
+//     this.setState({
+//       status: "Logout"
+//     });
+//   }
+// };
+
