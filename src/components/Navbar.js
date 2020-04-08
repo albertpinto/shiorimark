@@ -14,11 +14,11 @@ class Navbar extends Component {
       method: 'post',
       url: userURL,
       data: {
-        "email":"EriGardiner@gmail.com",
+        "email":"albertpinto123@gmail.com",
         "password":"Changme"
       }
     }).then(response => {
-      console.log (response.data.user.name)
+      //console.log (response)
           this.setState({
           user: response.data.user.name,
           status: "Logout"
