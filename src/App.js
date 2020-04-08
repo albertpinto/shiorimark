@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Actions from "./components/Actions";
 import Bookmarks from "./components/Bookmarks";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
 
 const url ="http://localhost:4000/"
 
@@ -30,6 +31,7 @@ class App extends Component {
         <BrowserRouter>
           <switch>
             <Route path="/" component={Bookmarks} exact={true} />
+            <Route path="/login" component={Login} exact={true} />
           </switch>
         </BrowserRouter>
         <Footer appName="Shiorimark"/>
