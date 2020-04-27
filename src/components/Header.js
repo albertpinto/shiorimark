@@ -33,7 +33,7 @@ const header = props => {
         <div className="row">
           <div className="col-md-6">
             <h1>
-              <i className="fas fa-home"></i>
+              <i className={props.category}></i>
               {props.type}
             </h1>
           </div>
